@@ -1,0 +1,42 @@
+<% if(flash[:notice] == "Produto salvo com sucesso !!!")%>
+<div class="alert alert-success">
+    <%= flash[:notice] %>
+</div>
+<% end %>
+
+<% if(flash[:notice] == "Produto excluido com sucesso !!!")%>
+<div class="alert alert-danger">
+    <%= flash[:notice] %>
+</div>
+<% end %>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Dpto</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= render @produtos_por_nome %>
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Dpto</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= render @produtos_por_preco%>
+    </tbody>
+
+</table>
+
+<%= link_to "Criar Novo Produto", new_produto_path%>
