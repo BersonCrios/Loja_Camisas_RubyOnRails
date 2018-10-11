@@ -1,25 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # Loja_Camisas_RubyOnRails
+
+# ALGUNS COMANDOS E TRECHOS UTEIS PARA APRENDIZADO
+rake db:create
+
+rake db:migrate
+
+rails console
+
+rails generate model produto nome:string descricao:text quantidade:integer preco:decimal
+
+todos = Produto.all
+
+todos.size
+
+<%  codigo ruby %> ===> processa
+
+<%= codigo ruby %> ===> Imprime
+
+rails g scaffold Departamento nome ====> CRIA CRUD
+
+rails g migration add_departamento_id_to_produto departamento_id:integer ====> reçaciona
